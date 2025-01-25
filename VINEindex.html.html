@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vine - Happy to Announce the Comeback of Vine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #28a745; /* Green background */
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .wallet-address {
+      font-size: 24px;
+      margin: 20px;
+      word-wrap: break-word;
+      background-color: #fff;
+      color: black;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    .wallet-address span {
+      font-weight: bold;
+    }
+
+    .message {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .footer {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 30px;
+    }
+
+    .early-info {
+      font-size: 14px;
+      color: #ffcc00; /* Highlight the text */
+      font-weight: bold;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      Vine
+    </div>
+
+    <div class="message">
+      Happy to announce the comeback of Vine!
+      <br>
+      Buy into our meme coin using the wallet address provided.
+    </div>
+
+    <!-- Wallet Address Display -->
+    <div class="wallet-address" id="walletAddress">
+      <span>Wallet Address:</span><br>
+      35oXrGS6wdZcRomy33Hqz3VDRwEKREsMYU54xFcbbB4F
+    </div>
+
+    <!-- Information about SOL Amounts -->
+    <div class="info">
+      Minimum amount: <strong>0.1 SOL</strong><br>
+      Maximum amount: <strong>100 SOL</strong><br>
+      Please send the specified amount directly to the above wallet address.
+    </div>
+
+    <!-- Footer Information -->
+    <div class="footer">
+      * Please ensure you are sending Solana (SOL) and not another token.
+    </div>
+
+    <!-- Early Coin Info -->
+    <div class="early-info">
+      Once sent, check your balance for your early coins. You won't be able to sell these coins until launch.
+    </div>
+  </div>
+
+  <script>
+    // Function to allow users to copy the wallet address
+    document.getElementById('walletAddress').addEventListener('click', function() {
+      const walletAddress = document.getElementById('walletAddress').textContent.trim();
+      navigator.clipboard.writeText(walletAddress)
+        .then(() => {
+          alert('Wallet address copied to clipboard!');
+        })
+        .catch((err) => {
+          console.error('Error copying text: ', err);
+        });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
